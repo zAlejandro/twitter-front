@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+/* Imagen de fondo difuminada */
+.fondo-blur {
+  min-height: 100vh;
+  background: url('https://palacionacional.gob.do/assets/Historia.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Contenedor de la tabla */
+.tabla-contenedor {
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.fondo-blur {
+  background: url('https://palacionacional.gob.do/assets/Historia.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.tarjeta-contenedora {
+  width: 100%;
+  max-width: 900px; /* controlamos el estiramiento */
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+}
+
+
+

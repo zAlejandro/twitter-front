@@ -1,25 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
+import Button from 'react-bootstrap/Button';
+
+import React, {useEffect, useState} from 'react';
+import {collection, getDocs} from 'firebase/firestore';
+import db from './firebase';
+
+import TablaVotos from './components/tablaVotos';
+import './App.css';
 
 function App() {
+  const [votantes, setVotantes] = useState([]);
+
+  useEffect(() => {
+    const obtenerVotantes = async () => {
+      const querySnapshot = await getDocs(collection(db, 'votantes'));
+      const datos = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      setVotantes(datos)
+    };
+
+    obtenerVotantes();
+  }, []);
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="">
       </header>
+      <TablaVotos/>
     </div>
   );
 }
+
 
 export default App;
