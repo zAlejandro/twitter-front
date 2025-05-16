@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import React, {useEffect, useState} from 'react';
-import {collection, getDocs, onSnapshot} from 'firebase/firestore';
+import {useEffect, useState} from 'react';
+import {collection, onSnapshot} from 'firebase/firestore';
 import db from '../firebase';
 import '../App.css';
 
@@ -29,7 +29,7 @@ function TablaVotos(){
             setVotantes(nuevosVotantes);
             setConteoVotos(votosTemp);
         });
-        
+
         return () => unsubcribe();
   }, []);
 
