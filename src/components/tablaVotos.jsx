@@ -96,7 +96,7 @@ function TablaVotos(){
                     <div className="tabla-contenedor mx-auto mt-5 p-4">
                         <h2 className="text-center mb-4">
                             LISTADO DE VOTOS
-                            <button className="btn btn-success align-items-end gap-2" onClick={guardarExcel}>
+                            <button className="btn btn-success align-items-end gap-2" onClick={guardarExcel} hidden>
                                 <i className="bi bi-file-earmark-excel-fill"></i>
                             </button>
                         </h2>
