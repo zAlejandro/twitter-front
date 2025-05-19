@@ -71,7 +71,6 @@ function TablaVotos(){
                             <thead className="table-dark">
                                 <tr>
                                 <th>#</th>
-                                <th>Cedula</th>
                                 <th>Plancha</th>
                                 </tr>
                             </thead>
@@ -79,8 +78,7 @@ function TablaVotos(){
                                 {votantes.map((voto, index) => (
                                 <tr key={voto.id}>
                                     <td>{index + 1}</td>
-                                    <td>{voto.cedula}</td>
-                                    <td>{voto.voto}</td>
+                                    <td>Plancha {voto.voto}</td>
                                 </tr>
                                 ))}
                             </tbody>
